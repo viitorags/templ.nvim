@@ -1,4 +1,4 @@
-<h1 align="center">templ.nvim</h1>
+<h1 align="center">scaffy.nvim</h1>
 
 <p align="center">
 
@@ -8,7 +8,7 @@
 
 </p>
 
-`templ.nvim` is a simple yet powerful Neovim plugin that lets you quickly scaffold new projects using predefined JSON templates.
+`scaffy.nvim` is a simple yet powerful Neovim plugin that lets you quickly scaffold new projects using predefined JSON templates.
 
 Create full project structures with directories and files, including custom file content. It also integrates with [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) for a smooth selection experience.
 
@@ -36,9 +36,9 @@ With [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-  "viitorags/templ.nvim",
+  "viitorags/scaffy.nvim",
   config = function()
-    require("templ").setup({
+    require("scaffy").setup({
       templates_path = "~/my-templates" -- optional
     })
   end
@@ -79,7 +79,7 @@ Templates are JSON files like the following:
 By default, the plugin uses its internal /template directory. You can override this with your own directory via the setup() function:
 
 ```lua
-require("templ").setup({
+require("scaffy").setup({
   templates_path = "~/my-templates"
 })
 ```

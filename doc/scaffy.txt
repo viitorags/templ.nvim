@@ -1,32 +1,32 @@
-*templ.txt*  Project creation plugin via template
+*scaffy.txt*  Project creation plugin via template
 
-Templ.nvim                                                              *templ.nvim*
+Scaffy.nvim                                                              *scaffy.nvim*
 
 This plugin allows you to create projects based on JSON templates. It supports the creation
 of complex folder/file structures and also integrates with Telescope for template selection.
 
 ==============================================================================
 
-Commands                                                                  *templ-commands*
+Commands                                                                  *scaffy-commands*
 
 :CreateProject {template_path}       Creates a project based on the specified JSON template.
 :CreateProjectSelect                 Opens Telescope to select a template.
 
 ==============================================================================
 
-Configuration                                                              *templ-config*
+Configuration                                                              *scaffy-config*
 
 You can configure the base path for custom templates:
 
 ```lua
-require("templ").setup({
+require("scaffy").setup({
   templates_path = "~/my-templates"
 })
 ```
 
 ==============================================================================
 
-Template Format templ-template
+Template Format scaffy-template
 
 A template is a JSON file with the following structure:
 
@@ -50,7 +50,7 @@ A template is a JSON file with the following structure:
 
 ==============================================================================
 
-Location templ-location
+Location scaffy-location
 
 Templates can be stored anywhere. By default, the plugin uses `<plugin_root>/templates/`,
 but you can override this with the `setup()` function.
