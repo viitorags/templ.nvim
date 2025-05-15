@@ -1,0 +1,29 @@
+{
+  "name": "express-rest-api",
+  "description": "RESTful API using Express.js",
+  "structure": [
+    { "path": "src/routes/" },
+    { "path": "src/controllers/" },
+    { "path": "src/models/" },
+    {
+      "path": "src/server.js",
+      "content": "const express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n    res.send('Express RESTful API');\n});\n\napp.listen(3000, () => {\n    console.log('Server is running on port 3000');\n});"
+    },
+    {
+      "path": "src/routes/exampleRoute.js",
+      "content": "const express = require('express');\nconst router = express.Router();\nconst exampleController = require('../controllers/exampleController');\n\nrouter.get('/example', exampleController.getExample);\n\nmodule.exports = router;"
+    },
+    {
+      "path": "src/controllers/exampleController.js",
+      "content": "exports.getExample = (req, res) => {\n    res.json({ message: 'Example data' });\n};"
+    },
+    {
+      "path": "src/models/exampleModel.js",
+      "content": "class ExampleModel {\n    static getData() {\n        return { key: 'value' };\n    }\n}\n\nmodule.exports = ExampleModel;"
+    },
+    {
+      "path": ".gitignore",
+      "content": "node_modules/\n.env\n*.log\n"
+    }
+  ]
+}

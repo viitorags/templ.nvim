@@ -1,0 +1,26 @@
+{
+  "name": "gin-rest-api",
+  "description": "RESTful API project using Gin framework",
+  "structure": [
+    { "path": "src/routes/" },
+    { "path": "src/controllers/" },
+    { "path": "src/models/" },
+    { "path": "src/main.go" },
+    {
+      "path": "src/main.go",
+      "content": "package main\n\nimport (\n\t\"github.com/gin-gonic/gin\"\n)\n\nfunc main() {\n\tr := gin.Default()\n\tr.GET(\"/\", func(c *gin.Context) {\n\t\tc.JSON(200, gin.H{\n\t\t\t\"message\": \"Gin RESTful API\",\n\t\t})\n\t})\n\n\tr.Run()\n}"
+    },
+    {
+      "path": "src/controllers/exampleController.go",
+      "content": "package controllers\n\nimport (\n\t\"net/http\"\n\t\"github.com/gin-gonic/gin\"\n)\n\nfunc GetExample(c *gin.Context) {\n\tc.JSON(http.StatusOK, gin.H{\"data\": \"Example data\"})\n}"
+    },
+    {
+      "path": "src/routes/routes.go",
+      "content": "package routes\n\nimport (\n\t\"github.com/gin-gonic/gin\"\n\t\"src/controllers\"\n)\n\nfunc SetupRoutes(r *gin.Engine) {\n\tr.GET(\"/example\", controllers.GetExample)\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "bin/\n*.log\n*.exe\n*.out\n"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "vue-spa",
+  "description": "Vue.js project for a Single Page Application",
+  "structure": [
+    { "path": "src/components/" },
+    { "path": "src/views/" },
+    { "path": "src/App.vue" },
+    { "path": "src/main.js" },
+    {
+      "path": "src/App.vue",
+      "content": "<template>\n  <div id=\"app\">\n    <HomePage />\n  </div>\n</template>\n\n<script>\nimport HomePage from './views/HomePage.vue';\n\nexport default {\n  name: 'App',\n  components: {\n    HomePage\n  }\n};\n</script>"
+    },
+    {
+      "path": "src/views/HomePage.vue",
+      "content": "<template>\n  <h1>Vue SPA</h1>\n</template>\n\n<script>\nexport default {\n  name: 'HomePage'\n};\n</script>"
+    },
+    {
+      "path": "src/main.js",
+      "content": "import { createApp } from 'vue';\nimport App from './App.vue';\n\ncreateApp(App).mount('#app');"
+    }
+  ]
+}

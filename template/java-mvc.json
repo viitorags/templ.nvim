@@ -1,0 +1,17 @@
+{
+  "name": "java-mvc",
+  "description": "Java project with MVC architecture",
+  "structure": [
+    { "path": "src/model/" },
+    { "path": "src/view/" },
+    { "path": "src/controller/" },
+    {
+      "path": "src/Main.java",
+      "content": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Java MVC Template\");\n    }\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "bin/\n*.class\n*.log\n"
+    }
+  ]
+}

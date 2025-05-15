@@ -1,0 +1,58 @@
+*templ.txt*  Project creation plugin via template
+
+Templ.nvim                                                              *templ.nvim*
+
+This plugin allows you to create projects based on JSON templates. It supports the creation
+of complex folder/file structures and also integrates with Telescope for template selection.
+
+==============================================================================
+
+Commands                                                                  *templ-commands*
+
+:CreateProject {template_path}       Creates a project based on the specified JSON template.
+:CreateProjectSelect                 Opens Telescope to select a template.
+
+==============================================================================
+
+Configuration                                                              *templ-config*
+
+You can configure the base path for custom templates:
+
+```lua
+require("templ").setup({
+  templates_path = "~/my-templates"
+})
+```
+
+==============================================================================
+
+Template Format templ-template
+
+A template is a JSON file with the following structure:
+
+```json
+{
+  "name": "my-template",
+  "description": "Template description",
+  "structure": [
+    { 
+        "path": "src/index.js", 
+        "content": "console.log('Hello!');" 
+    },
+    { "path": "src/components/" },
+    { 
+        "path": ".gitignore", 
+        "content": "node_modules\n" 
+    }
+  ]
+}
+```
+
+==============================================================================
+
+Location templ-location
+
+Templates can be stored anywhere. By default, the plugin uses `<plugin_root>/templates/`,
+but you can override this with the `setup()` function.
+
+==============================================================================

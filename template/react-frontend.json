@@ -1,0 +1,23 @@
+{
+  "name": "react-frontend",
+  "description": "Basic Border Project with React",
+  "structure": [
+    { "path": "src/components/" },
+    {
+      "path": "src/index.js",
+      "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport App from './App';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(<App />);"
+    },
+    {
+      "path": "src/App.js",
+      "content": "import React from 'react';\n\nfunction App() {\n  return <h1>Hello, React!</h1>;\n}\n\nexport default App;"
+    },
+    {
+      "path": "package.json",
+      "content": "{\n  \"name\": \"react-frontend\",\n  \"version\": \"1.0.0\",\n  \"scripts\": {\n    \"start\": \"react-scripts start\"\n  },\n  \"dependencies\": {\n    \"react\": \"^18.2.0\",\n    \"react-dom\": \"^18.2.0\"\n  }\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "node_modules\nbuild"
+    }
+  ]
+}

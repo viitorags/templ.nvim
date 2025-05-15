@@ -1,0 +1,26 @@
+{
+  "name": "aspnet-core-layers",
+  "description": "ASP.NET Core project with layered architecture",
+  "structure": [
+    { "path": "src/Domain/" },
+    { "path": "src/Application/" },
+    { "path": "src/Infrastructure/" },
+    { "path": "src/Web/" },
+    {
+      "path": "src/Web/Program.cs",
+      "content": "var builder = WebApplication.CreateBuilder(args);\nvar app = builder.Build();\n\napp.MapGet(\"/\", () => \"ASP.NET Core Layers\");\n\napp.Run();"
+    },
+    {
+      "path": "src/Domain/ExampleEntity.cs",
+      "content": "namespace Domain {\n    public class ExampleEntity {\n        public int Id { get; set; }\n        public string Name { get; set; }\n    }\n}"
+    },
+    {
+      "path": "src/Application/ExampleService.cs",
+      "content": "using Domain;\n\nnamespace Application {\n    public class ExampleService {\n        public ExampleEntity GetExample() {\n            return new ExampleEntity { Id = 1, Name = \"Example\" };\n        }\n    }\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "bin/\nobj/\nlogs/\n*.user\n*.vs\n"
+    }
+  ]
+}

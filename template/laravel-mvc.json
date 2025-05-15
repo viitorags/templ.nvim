@@ -1,0 +1,22 @@
+{
+  "name": "laravel-mvc",
+  "description": "Laravel project with MVC architecture",
+  "structure": [
+    { "path": "app/Models/" },
+    { "path": "app/Http/Controllers/" },
+    { "path": "resources/views/" },
+    { "path": "routes/web.php" },
+    {
+      "path": "app/Http/Controllers/ExampleController.php",
+      "content": "<?php\n\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\n\nclass ExampleController extends Controller\n{\n    public function index()\n    {\n        return response()->json(['message' => 'Laravel MVC']);\n    }\n}"
+    },
+    {
+      "path": "routes/web.php",
+      "content": "<?php\n\nuse Illuminate\\Support\\Facades\\Route;\nuse App\\Http\\Controllers\\ExampleController;\n\nRoute::get('/', [ExampleController::class, 'index']);\n"
+    },
+    {
+      "path": ".gitignore",
+      "content": "/vendor/\n/node_modules/\n.env\n*.log\n"
+    }
+  ]
+}

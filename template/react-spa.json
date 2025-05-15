@@ -1,0 +1,22 @@
+{
+  "name": "react-spa",
+  "description": "Projeto React Single Page Application",
+  "structure": [
+    { "path": "src/components/" },
+    { "path": "src/pages/" },
+    { "path": "src/App.js" },
+    { "path": "src/index.js" },
+    {
+      "path": "src/App.js",
+      "content": "import React from 'react';\nimport HomePage from './pages/HomePage';\n\nfunction App() {\n    return (\n        <div>\n            <HomePage />\n        </div>\n    );\n}\n\nexport default App;"
+    },
+    {
+      "path": "src/pages/HomePage.js",
+      "content": "import React from 'react';\n\nfunction HomePage() {\n    return <h1>React SPA</h1>;\n}\n\nexport default HomePage;"
+    },
+    {
+      "path": "src/index.js",
+      "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport App from './App';\n\nReactDOM.render(<App />, document.getElementById('root'));"
+    }
+  ]
+}

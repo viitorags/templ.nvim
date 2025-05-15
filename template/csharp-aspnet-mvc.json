@@ -1,0 +1,17 @@
+{
+  "name": "csharp-aspnet-mvc",
+  "description": "ASP.NET project with MVC architecture",
+  "structure": [
+    { "path": "Controllers/" },
+    { "path": "Models/" },
+    { "path": "Views/" },
+    {
+      "path": "Program.cs",
+      "content": "var builder = WebApplication.CreateBuilder(args);\nvar app = builder.Build();\n\napp.MapGet(\"/\", () => \"Hello ASP.NET MVC\");\n\napp.Run();"
+    },
+    {
+      "path": ".gitignore",
+      "content": "bin/\nobj/\n*.user\n.vscode/\n*.vs\n"
+    }
+  ]
+}

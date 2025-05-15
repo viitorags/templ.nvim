@@ -1,0 +1,22 @@
+{
+  "name": "java-springboot",
+  "description": "Java project with Spring Boot framework",
+  "structure": [
+    { "path": "src/main/java/com/example/demo/controller/" },
+    { "path": "src/main/java/com/example/demo/service/" },
+    { "path": "src/main/java/com/example/demo/repository/" },
+    { "path": "src/main/java/com/example/demo/model/" },
+    {
+      "path": "src/main/java/com/example/demo/DemoApplication.java",
+      "content": "package com.example.demo;\n\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\n\n@SpringBootApplication\npublic class DemoApplication {\n    public static void main(String[] args) {\n        SpringApplication.run(DemoApplication.class, args);\n    }\n}"
+    },
+    {
+      "path": "pom.xml",
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project xmlns=\"http://maven.apache.org/POM/4.0.0\"\n         xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n         xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n    <modelVersion>4.0.0</modelVersion>\n    <groupId>com.example</groupId>\n    <artifactId>demo</artifactId>\n    <version>0.0.1-SNAPSHOT</version>\n    <dependencies>\n        <dependency>\n            <groupId>org.springframework.boot</groupId>\n            <artifactId>spring-boot-starter-web</artifactId>\n        </dependency>\n    </dependencies>\n</project>"
+    },
+    {
+      "path": ".gitignore",
+      "content": "target/\n*.log\n*.class\n/.idea/\n"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ktor-modular",
+  "description": "Ktor project using modular architecture",
+  "structure": [
+    { "path": "src/main/kotlin/com/example/plugins/" },
+    { "path": "src/main/kotlin/com/example/routes/" },
+    { "path": "src/main/kotlin/com/example/Application.kt" },
+    {
+      "path": "src/main/kotlin/com/example/Application.kt",
+      "content": "package com.example\n\nimport io.ktor.server.engine.*\nimport io.ktor.server.netty.*\nimport com.example.plugins.*\n\nfun main() {\n    embeddedServer(Netty, port = 8080) {\n        configureRouting()\n    }.start(wait = true)\n}"
+    },
+    {
+      "path": "src/main/kotlin/com/example/plugins/Routing.kt",
+      "content": "package com.example.plugins\n\nimport io.ktor.server.routing.*\nimport io.ktor.server.application.*\nimport io.ktor.server.response.*\n\nfun Application.configureRouting() {\n    routing {\n        get(\"/\") {\n            call.respondText(\"Ktor Modular Architecture\")\n        }\n    }\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "*.class\n*.log\nbuild/\n.idea/\n"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+templ-commands	templ.txt	/*templ-commands*
+templ-config	templ.txt	/*templ-config*
+templ.nvim	templ.txt	/*templ.nvim*
+templ.txt	templ.txt	/*templ.txt*

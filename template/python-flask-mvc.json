@@ -1,0 +1,25 @@
+{
+  "name": "flask-mvc",
+  "description": "Flask project with MVC architecture",
+  "structure": [
+    { "path": "app/models/" },
+    { "path": "app/views/" },
+    { "path": "app/controllers/" },
+    {
+      "path": "app/app.py",
+      "content": "from flask import Flask\n\napp = Flask(__name__)\n\n@app.route('/')\ndef home():\n    return 'Flask MVC Architecture'\n\nif __name__ == '__main__':\n    app.run(debug=True)"
+    },
+    {
+      "path": "app/models/example_model.py",
+      "content": "class ExampleModel:\n    def get_data(self):\n        return {'key': 'value'}"
+    },
+    {
+      "path": "app/controllers/example_controller.py",
+      "content": "from app.models.example_model import ExampleModel\n\nclass ExampleController:\n    def __init__(self):\n        self.model = ExampleModel()\n\n    def get_data(self):\n        return self.model.get_data()"
+    },
+    {
+      "path": ".gitignore",
+      "content": "__pycache__/\n*.pyc\ninstance/\n*.log\n"
+    }
+  ]
+}

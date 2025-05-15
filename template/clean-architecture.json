@@ -1,0 +1,18 @@
+{
+  "name": "clean-architecture",
+  "description": "Java project with clean architecture principles",
+  "structure": [
+    { "path": "src/domain/" },
+    { "path": "src/usecases/" },
+    { "path": "src/interfaces/" },
+    { "path": "src/infrastructure/" },
+    {
+      "path": "src/main/Application.java",
+      "content": "public class Application {\n    public static void main(String[] args) {\n        System.out.println(\"Clean Architecture\");\n    }\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "out/\n*.class\n*.log\n*.iml\n/.idea/\n"
+    }
+  ]
+}

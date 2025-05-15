@@ -1,0 +1,17 @@
+{
+  "name": "rails-app",
+  "description": "Aplicação Ruby on Rails",
+  "structure": [
+    { "path": "app/models/" },
+    { "path": "app/views/" },
+    { "path": "app/controllers/" },
+    {
+      "path": "app/controllers/welcome_controller.rb",
+      "content": "class WelcomeController < ApplicationController\n  def index\n    render json: { message: 'Rails App' }\n  end\nend"
+    },
+    {
+      "path": "config/routes.rb",
+      "content": "Rails.application.routes.draw do\n  root 'welcome#index'\nend"
+    }
+  ]
+}

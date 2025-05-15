@@ -1,0 +1,14 @@
+{
+  "name": "go-http",
+  "description": "Basic HTTP server project in Go",
+  "structure": [
+    {
+      "path": "main.go",
+      "content": "package main\n\nimport (\n  \"fmt\"\n  \"net/http\"\n)\n\nfunc handler(w http.ResponseWriter, r *http.Request) {\n  fmt.Fprintf(w, \"Hello, Go HTTP server!\")\n}\n\nfunc main() {\n  http.HandleFunc(\"/\", handler)\n  http.ListenAndServe(\":8080\", nil)\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "bin/\n*.log\n"
+    }
+  ]
+}

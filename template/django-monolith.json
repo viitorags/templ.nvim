@@ -1,0 +1,27 @@
+{
+  "name": "django-monolith",
+  "description": "Django project using monolithic architecture",
+  "structure": [
+    { "path": "project_name/settings.py" },
+    { "path": "project_name/urls.py" },
+    { "path": "app_name/models.py" },
+    { "path": "app_name/views.py" },
+    { "path": "app_name/urls.py" },
+    {
+      "path": "project_name/urls.py",
+      "content": "from django.contrib import admin\nfrom django.urls import path, include\n\nurlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('app_name.urls')),\n]"
+    },
+    {
+      "path": "app_name/views.py",
+      "content": "from django.http import JsonResponse\n\ndef home(request):\n    return JsonResponse({'message': 'Django Monolithic Architecture'})"
+    },
+    {
+      "path": "app_name/urls.py",
+      "content": "from django.urls import path\nfrom . import views\n\nurlpatterns = [\n    path('', views.home, name='home'),\n]"
+    },
+    {
+      "path": ".gitignore",
+      "content": "*.pyc\n__pycache__/\ndb.sqlite3\n*.log\n.env\n"
+    }
+  ]
+}

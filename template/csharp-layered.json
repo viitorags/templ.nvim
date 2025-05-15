@@ -1,0 +1,18 @@
+{
+  "name": "csharp-layered",
+  "description": "C# project with layered architecture",
+  "structure": [
+    { "path": "Presentation/" },
+    { "path": "Business/" },
+    { "path": "Data/" },
+    { "path": "Temp/" },
+    {
+      "path": "Program.cs",
+      "content": "using System;\n\nclass Program {\n    static void Main(string[] args) {\n        Console.WriteLine(\"C# Layered Template\");\n    }\n}"
+    },
+    {
+      "path": ".gitignore",
+      "content": "bin/\nobj/\ntemp/\n*.user\n*.vs\n"
+    }
+  ]
+}
