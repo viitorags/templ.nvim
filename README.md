@@ -6,10 +6,6 @@
 
 <img src="https://img.shields.io/badge/Made%20With%20Lua-2C2D72?logo=lua&logoColor=fff&style=for-the-badge" alt="made with lua" >
 
-<img src="https://img.shields.io/github/actions/workflow/status/viitorags/templ.nvim/release.yml?style=for-the-badge&label=release" alt="release action status" />
-
-<img src="https://img.shields.io/github/actions/workflow/status/viitorags/templ.nvim/lint.yml?style=for-the-badge&label=Lint" alt="release action status" />
-
 </p>
 
 `templ.nvim` is a simple yet powerful Neovim plugin that lets you quickly scaffold new projects using predefined JSON templates.
